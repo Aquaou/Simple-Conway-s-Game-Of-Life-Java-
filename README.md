@@ -22,7 +22,7 @@ private static final int[][] DIRS_8 = {
             {1, 1} // bottom-right
     };
 ```
-<img width="698" height="705" alt="DIR8" src="https://github.com/user-attachments/assets/2374fdd3-7f83-48a2-a59f-2f8da968d267" />
+<img width="349" height="353" alt="DIR8" src="https://github.com/user-attachments/assets/2374fdd3-7f83-48a2-a59f-2f8da968d267" />
 
 # isFilled method:
 Checks the grid for filled or alive cells.
