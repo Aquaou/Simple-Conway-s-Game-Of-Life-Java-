@@ -49,3 +49,71 @@ public static int countFilledNeighbors(String[][] grid, int r, int c) {
         return count;
     }
 ```
+# nextGen method:
+Calculates the next generation.
+```java
+public static String[][] nextGen() {
+        String[][] newgen = new String[30][35];
+
+        for(int r = 0; r < grid.length; r++) {
+            for (int c = 0; c < grid[r].length; c++) {
+                int neighbors = countFilledNeighbors(grid, r, c);
+                String cell = grid[r][c];
+
+                if (cell != null && !cell.equals(DEAD)) {
+                    if (neighbors == 2 || neighbors == 3) {
+                        newgen[r][c] = ALIVE;
+                    } else {
+                        newgen[r][c] = DEAD;
+                    }
+                } else {
+                    if (neighbors == 3) {
+                        newgen[r][c] = ALIVE;
+                    } else {
+                        newgen[r][c] = DEAD;
+                    }
+                }
+            }
+        }
+        return newgen;
+    }
+```
+# Create and Print Grid methods:
+```java
+public static void createGrid() {
+        for (String[] strings : grid) {
+            Arrays.fill(strings, ".");
+        }
+    }
+
+    public static void printGrid() {
+        for (String[] row : grid) {
+            for (String cell : row) {
+                System.out.print(cell + " ");
+            }
+            System.out.println();
+        }
+    }
+```
+# Main method:
+```java
+public static void main(String[] args) {
+        createGrid();
+        glider();
+
+        for (int generation = 0; generation < 100; generation++) {
+            System.out.println("Generation: " + generation);
+            System.out.println();
+
+            printGrid();
+
+            grid = nextGen();
+
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                break;
+            }
+        }
+    }
+```
