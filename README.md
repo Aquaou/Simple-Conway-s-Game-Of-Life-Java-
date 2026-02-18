@@ -3,6 +3,7 @@
 A simple, terminal-based implementation of Conway's Game of Life that demonstrates cellular automaton behavior through clear, educational code.
 
 > **Note:** This documentation was created with the assistance of Claude (Anthropic AI) to help explain the implementation and programming concepts in detail.
+> Edited and reviewed by Titus Ward.
 
 ---
 
@@ -421,3 +422,4 @@ To run this program:
 ## Acknowledgments
 
 This documentation was created with the assistance of Claude (Anthropic AI) to provide clear explanations of both the Game of Life logic and the Java programming concepts used in this implementation.
+Edited and reviewed by Titus Ward.
